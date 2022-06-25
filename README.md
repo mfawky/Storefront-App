@@ -1,51 +1,45 @@
 # Storefront-App
 
 ```sh
-# Installing dependencies
+# Installing packages
 npm i
 
-# To transpile the TypeScript
+# build
 npm run build
 
-# To clear the build file
-npm run clean
+# To start the server and watch for changes
+npm watch
 
-# To start the server
-npm start
-
-# To format files using prettier
+# run prettier
 npm run prettier
 
-# To check for errors
+# run eslint
 npm run lint
 
-# To run test suite
+# To run the tests
 npm run test
 ```
 
 
 
-### Database migrations
+### DB Migrations
 ```sh
-# To create the data schema tables run this command
+# To create the tables run this
 db-migrate up
 
-# To drop the data schema tables run this command
+# To drop the tables run this 
 db-migrate down
 
-# To drop all database tables with single command
-db-migrate reset
-
-# Migrations used in the project
+# All Migrations you will need in this project
 db-migrate create users-table --sql-file
 db-migrate create products-table --sql-file
 db-migrate create orders-table --sql-file
 db-migrate create orders_products-table --sql-file
 ```
 
-### .env
+### ENV Variables
 ```sh
-# To connect with the database, use the following .env variables
+# use the following .env variables for db connection
 POSTGRES_HOST=127.0.0.1
 POSTGRES_DB=storefront_db
 POSTGRES_TESTING_DB=storefront_db_testing
