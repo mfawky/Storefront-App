@@ -46,14 +46,11 @@ db-migrate create orders_products-table --sql-file
 ### .env
 ```sh
 # To connect with the database, use the following .env variables
-SERVER_PORT=8000
-DATABASE_PORT=5432
 POSTGRES_HOST=127.0.0.1
-POSTGRES_DB=storefront_dev
-POSTGRES_DB_TEST=storefront_test
-POSTGRES_USER=nourbeh
-POSTGRES_PASSWORD=123456789
-ENV=dev
-SALT_ROUNDS=10
-SECRET_TOKEN=helloworld
+POSTGRES_DB=storefront_db
+POSTGRES_TESTING_DB=storefront_db_testing
+POSTGRES_USER=storefront_user
+POSTGRES_PASSWORD=admin
+ENV=testing
+SECRET_TOKEN=aaaa
 ```
