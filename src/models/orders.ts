@@ -54,7 +54,7 @@ export class OrdersStore {
     // Try and catch here to handle any exception
     try {
       const connection = await DB_Pool.connect()
-      const sqlQuery = `UPDATE orders SET status = '${status} WHERE id = (${oldId}) RETURNING *` // here we can finally write a sql query inside our ts code
+      const sqlQuery = `UPDATE orders SET status = '${status}' WHERE id = ${oldId} RETURNING *` // here we can finally write a sql query inside our ts code
       const results = await connection.query(sqlQuery) // all the results of the query shal be stored in the results variable
       connection.release() // the release method to cose the connection after we're done here
       return results.rows[0]
