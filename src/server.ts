@@ -11,7 +11,7 @@ config();
 
 const app: express.Application = express()
 const address: string = "0.0.0.0:3000"
-
+const port: number = (process.env.SERVER_PORT as unknown as number) || 3000
 
 
 app.use(bodyParser.json());
@@ -25,7 +25,7 @@ productsRoutes(app);
 ordersRoutes(app);
 
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log(`starting app on: ${address}`)
 })
 
